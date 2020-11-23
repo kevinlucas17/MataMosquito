@@ -2,13 +2,23 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 10
 function ajustaTamanhoPalcoJogo(){
- largura = window.innerHeight
- altura = window.innerWidth
+ altura = window.innerHeight
+ largura = window.innerWidth
 
  console.log(altura,largura)
 }
 ajustaTamanhoPalcoJogo()
+
+var cronometro =  setInterval(function(){
+	tempo--
+	getElementById('crono').innerHTML=tempo	
+},1000)
+
+
+
+
 
 
 function posicaoRandomica(){
@@ -23,8 +33,8 @@ function posicaoRandomica(){
   		}
 	}
 
-	var posicaoX = Math.floor(Math.random()*altura) -90
-	var posicaoY =Math.floor(Math.random()*largura) -90
+	var posicaoY = Math.floor(Math.random()*altura) -90
+	var posicaoX =Math.floor(Math.random()*largura) -90
 
 	 posicaoX  =  posicaoX < 0 ? 0 :  posicaoX 
 	 posicaoY  =  posicaoY < 0 ? 0 :  posicaoY 
@@ -68,5 +78,5 @@ function ladoRandom(){
 	}
 }
 function fimDeJogo(){
-	
+	window.location.href ='fim_de_jogo.html'
 }

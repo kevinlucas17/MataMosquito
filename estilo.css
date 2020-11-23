@@ -21,8 +21,9 @@
 }
 
 body{
-	background-repeat: no-repeat;
-	background-image: url('imagens/bg.jpg');
+	background-repeat: no-repeat center fixed;
+	background-image: url('imagens/bg.jpg');	
+	background-size: cover;
 }
 .painel{
 	position: absolute;
@@ -39,5 +40,5 @@ body{
 }
 .cronometro{
 	float: left;
-	font-size: 20px;
+	font-size: 30px;
 }
