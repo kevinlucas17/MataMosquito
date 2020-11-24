@@ -79,5 +79,5 @@ function fimDeJogo(){
 	window.location.href ='fim_de_jogo.html'
 }
 function reiniciar(){
-	window.location.href ='index.html'
+	window.location.href ='inicio.html'
 }
