@@ -2,7 +2,22 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 10
+var tempo = 15
+var criaMoscaTempo = 1000
+
+var nivel =window.location.search
+nivel.replace("?",'')
+
+switch(nivel){
+		case 'facil':
+		var criaMoscaTempo = 1500
+
+		case 'medio':
+		var criaMoscaTempo = 1000
+
+		case 'dificil':
+		var criaMoscaTempo = 750
+}
 
 function ajustaTamanhoPalcoJogo(){
  altura = window.innerHeight
@@ -79,5 +94,5 @@ function fimDeJogo(){
 	window.location.href ='fim_de_jogo.html'
 }
 function reiniciar(){
-	window.location.href ='inicio.html'
+	window.location.href ='index.html'
 }
