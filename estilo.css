@@ -27,18 +27,22 @@ body{
 }
 .painel{
 	position: absolute;
-	left: 0px:;
-	width: 90px;
-	padding: 10px;
-	bottom: 0px;
+	left: 0px;
+	width: 150px;
+	padding: 20px;
+	bottom: 5px;
 	border-top: solid 1px #fff;
 	background-color: #fff;
 	opacity: 0.7;
 }
 .vidas{	
 	float: left;
+	padding-bottom: 5px;	
 }
 .cronometro{
 	float: left;
-	font-size: 30px;
+	font-size: 20px;	
+}
+.reiniciar{
+	vertical-align: center;
 }

@@ -3,6 +3,7 @@ var altura = 0
 var largura = 0
 var vidas = 1
 var tempo = 10
+
 function ajustaTamanhoPalcoJogo(){
  altura = window.innerHeight
  largura = window.innerWidth
@@ -12,14 +13,15 @@ function ajustaTamanhoPalcoJogo(){
 ajustaTamanhoPalcoJogo()
 
 var cronometro =  setInterval(function(){
-	tempo--
-	getElementById('crono').innerHTML=tempo	
-},1000)
-
-
-
-
-
+		tempo -=1
+		if(tempo<0){
+			clearInterval(cronometro)
+			clearInterval(criaMosca)
+			window.location.href = 'vitoria.html'
+		}else{
+			document.getElementById('cronometro').innerHTML = tempo	
+		}
+	},1000)
 
 function posicaoRandomica(){
 	if(document.getElementById('mosquito')){
@@ -58,15 +60,11 @@ function tamanhoRandom(){
 	switch(tamanho){
 		case 0:
 			return 'mosquito1'
-
 		case 1:
 			return 'mosquito2'
-
 		case 2:
 			return 'mosquito3'
-
 	}
-
 }
 function ladoRandom(){
 	var lado = Math.floor(Math.random()*2)
@@ -79,4 +77,7 @@ function ladoRandom(){
 }
 function fimDeJogo(){
 	window.location.href ='fim_de_jogo.html'
+}
+function reiniciar(){
+	window.location.href ='index.html'
 }
